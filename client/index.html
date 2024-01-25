@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+  <title>Alcreed chat</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      height: 100vh;
+      display: grid;
+      place-content: center;
+      grid-template-rows: 1fr;
+      margin: 0;
+      padding: 36px;
+    }
+
+    #chat {
+      width: 350px;
+      height: 100%;
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <section id="chat">
+    <form id="form">
+      <input type="text" name="message" id="input" placeholder="Type a message" autocomplete="off">
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</body>
+</html>
