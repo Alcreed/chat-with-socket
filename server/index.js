@@ -16,6 +16,10 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('A user has disconnected!');
   })
+
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg) // Broadcast --> emitir mensaje a todos los usuarios
+  })
 })
 
 app.use(logger('dev'))
